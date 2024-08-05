@@ -5,18 +5,22 @@ Feature: Logout from the application
 
     #* AC: user should log out from the homepage by clicking the “Log out”  button under the account name.
 
-
+    
     # TODO: verify users can logout from the app
 
-    Scenario Outline: User is successfully logged out from the homepage by clicking the "Log out" button
-        Given user is logged in as '<user-type>'
-        And user is already on the homepage
-        When user click the "Log out" button under the account name
-        Then user should be redirected to the login page
+    Background:
+    Given user is already on the login page
+
+    @lib-02-01
+    Scenario Outline: Verify user can logged out from the homepage
+        Given user is already logged in as '<user-type>'
+        When user clicks the user profile on top right corner of the page
+        And clicks the logout button
+        Then user should be logged out from the app
         Examples:
             | user-type |
             | admin     |
-            | studen    |     
+            | student   |     
 
     
     #? Should there be more scenarios for this user story? Feel free to add more scenarios.
