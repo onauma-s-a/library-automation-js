@@ -56,7 +56,7 @@ export class LoginPage extends BasePage {
     await this.loginButton.click();
   }
 
- // ---------------------- Create log out -------------------
+ // -----------------------------------------
 
  async login(user_type) {
   if(user_type == "student") {
