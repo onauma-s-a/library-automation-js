@@ -12,6 +12,10 @@ export class DashboardPage extends BasePage {
     this.logoutButton = page.getByText("Log Out");
 
     this.bookLink = page.locator("//a[@href='#books' and @class='nav-link']");
+    this.borrowingBooksLink = page.locator("//span[@class='title' and text()='Borrowing Books']");
+
+    this.bookTittle = page.locator("//h3[text()='Book Management']");
+    this.borrowingBookTittle = page.locator("//h3[text()='Borrowing Books']");
     
   }
 
