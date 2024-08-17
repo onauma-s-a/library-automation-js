@@ -12,17 +12,17 @@ When('admin is already on homepage', async function () {
 
 Then('admin should see Dashboard module on tab bar', async function () {
   // Write code here that turns the phrase above into concrete actions
-  await expect(PageManager.dashboardPage.dashboardLink).toBeVisible();
+  await expect(PageManager.dashboardPage.dashboardTittle).toBeVisible();
 });
 
 Then('should see User module on tab bar', async function () {
   // Write code here that turns the phrase above into concrete actions
-  await expect(PageManager.dashboardPage.usersLink).toBeVisible();
+  await expect(PageManager.dashboardPage.userTittle).toBeVisible();
 });
 
 Then('shoud see Books module on tab bar', async function () {
   // Write code here that turns the phrase above into concrete actions
-  await expect(PageManager.dashboardPage.bookLink).toBeVisible();
+  await expect(PageManager.dashboardPage.bookTittle).toBeVisible();
 });
 
 
