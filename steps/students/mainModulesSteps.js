@@ -35,8 +35,8 @@ When('user click on {string} link', async function (string) {
 Then('user should be in {string} page', async function (string) {
   // Write code here that turns the phrase above into concrete actions
   if(string === 'Books') {
-    await expect(PageManager.dashboardPage.bookTittle).toBeVisible(); 
+    await expect(PageManager.dashboardPage.bookLink).toBeVisible(); 
   } else if (string === 'Borrowing Books') {
-    await expect(PageManager.dashboardPage.borrowingBookTittle).toBeVisible(); 
+    await expect(PageManager.dashboardPage.borrowingBooksLink).toBeVisible(); 
   } 
 });
