@@ -21,6 +21,7 @@ export class DashboardPage extends BasePage {
     this.dashboardTittle = page.locator("//span[@class='title' and text()='Dashboard']")
     this.userTittle = page.locator("//span[@class='title' and text()='Users']");
     
+  
   }
 
 }

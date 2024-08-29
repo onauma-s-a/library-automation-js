@@ -31,22 +31,22 @@ Then('shoud see Books module on tab bar', async function () {
 When('admin click on {string} link', async function (string) {
   // Write code here that turns the phrase above into concrete actions
   if(string === 'Dashboard') {
-    await PageManager.dashboardPage.dashboardLink.click();
+    await PageManager.dashboardPage.dashboardTittle.click();
   } else if (string === 'Users') {
-    await PageManager.dashboardPage.usersLink.click();
+    await PageManager.dashboardPage.userTittle.click();
   } else if (string === 'Books') {
-    await PageManager.dashboardPage.bookLink.click();
+    await PageManager.dashboardPage.bookTittle.click();
   }   
 });
 
 Then('admin should be in {string} page', async function (string) {
   // Write code here that turns the phrase above into concrete actions
   if(string === 'Dashboard') {
-    await expect(PageManager.dashboardPage.dashboardLink).toBeVisible;
+    await expect(PageManager.page).toHaveURL('https://library2.cydeo.com/#dashboard');
   } else if (string === 'Users') {
-    await expect(PageManager.dashboardPage.usersLink).toBeVisible();
+    await expect(PageManager.page).toHaveURL('https://library2.cydeo.com/#users');
   } else if (string === 'Books') {
-    await expect(PageManager.dashboardPage.bookLink).toBeVisible();
-  }   
+    await await expect(PageManager.page).toHaveURL('https://library2.cydeo.com/#books');
+  } 
 });
 
