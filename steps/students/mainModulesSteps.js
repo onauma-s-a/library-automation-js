@@ -26,17 +26,17 @@ Then('shoud see Borrowing Books module on tab bar', async function () {
 When('user click on {string} link', async function (string) {
   // Write code here that turns the phrase above into concrete actions
   if(string === 'Books') {
-    await PageManager.dashboardPage.bookLink.click();
+    await PageManager.dashboardPage.bookTittle.click();
   } else if (string === 'Borrowing Books') {
-    await PageManager.dashboardPage.borrowingBooksLink.click();
+    await PageManager.dashboardPage.borrowingBookTittle.click();
   }                                                                              
 });
 
 Then('user should be in {string} page', async function (string) {
   // Write code here that turns the phrase above into concrete actions
   if(string === 'Books') {
-    await expect(PageManager.dashboardPage.bookLink).toBeVisible(); 
+    await expect(PageManager.page).toHaveURL('https://library2.cydeo.com/#books');
   } else if (string === 'Borrowing Books') {
-    await expect(PageManager.dashboardPage.borrowingBooksLink).toBeVisible(); 
+    await expect(PageManager.page).toHaveURL('https://library2.cydeo.com/#borrowing-books');
   } 
 });

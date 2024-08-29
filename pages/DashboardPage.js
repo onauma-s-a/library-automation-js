@@ -11,11 +11,6 @@ export class DashboardPage extends BasePage {
     this.userprofileImage = page.locator("//img[@id='user_avatar']");
     this.logoutButton = page.getByText("Log Out");
 
-    this.bookLink = page.locator("//a[@href='#books' and @class='nav-link']");
-    this.borrowingBooksLink = page.locator("//a[@class='nav-link' and contains(., 'Borrowing Books')]");
-    this.dashboardLink = page.locator("//a[@class='nav-link' and contains(., 'Dashboard')]")
-    this.usersLink = page.locator("//a[@class='nav-link' and contains(., 'Users')]");
-
     this.bookTittle = page.locator("//span[@class='title' and text()='Books']");
     this.borrowingBookTittle = page.locator("//span[@class='title' and text()='Borrowing Books']");
     this.dashboardTittle = page.locator("//span[@class='title' and text()='Dashboard']")
